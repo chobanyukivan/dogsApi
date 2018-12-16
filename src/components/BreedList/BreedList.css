@@ -1,15 +1,15 @@
-.title__h2 {
+.breeds-title {
     text-align: center;
 }
 .breeds-wrap {
     display: flex;
 }
-.breeds-wrap-l, .breeds-wrap-r {
+.breeds-wrap-left, .breeds-wrap-right {
     padding: 0 30px;
     width: 20%;
     min-width: 135px;
 }
-.breeds-wrap-r {
+.breeds-wrap-right {
     width: 70%;
     position: relative;
 }

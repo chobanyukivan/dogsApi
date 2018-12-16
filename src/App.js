@@ -5,12 +5,12 @@ import ContainerBreedList from './components/BreedList/index';
 import MainMnu from './components/MainMnu/MainMnu';
 import Main from './components/Main/Main';
 
-import './App.css';
+import './styles/App.css';
 
 const App = () => (
   <Router>
     <Fragment>
-      <h1 className="title__h1">myDogApp</h1>
+      <h1 className="app-title">myDogApp</h1>
       <MainMnu />
       <Switch>
         <Route exact path="/" component={Main} />

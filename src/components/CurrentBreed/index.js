@@ -1,15 +1,15 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
-import Current from './Current.jsx';
+import CurrentBreed from './CurrentBreed';
 import { getCurrentBreed } from '../../redux/Actions/dogs';
 
 
-class ContainerCurrent extends Component {
+class ContainerCurrentBreed extends Component {
   render() {
     const { getCurrentBreedAction, match } = this.props;
     return (
-      <Current
+      <CurrentBreed
         getCurrentBreed={getCurrentBreedAction}
         match={match}
         breed={match.params.topicId}
@@ -24,7 +24,7 @@ const mapDispatchToProps = dispatch => ({
   },
 });
 
-ContainerCurrent.propTypes = {
+ContainerCurrentBreed.propTypes = {
   getCurrentBreedAction: PropTypes.func.isRequired,
   match: PropTypes.shape({
     isExact: PropTypes.bool.isRequired,
@@ -36,4 +36,4 @@ ContainerCurrent.propTypes = {
   }).isRequired,
 };
 
-export default connect(() => ({ }), mapDispatchToProps)(ContainerCurrent);
+export default connect(() => ({ }), mapDispatchToProps)(ContainerCurrentBreed);

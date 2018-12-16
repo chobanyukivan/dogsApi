@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
-import BreedList from './BreedList.jsx';
+import BreedList from './BreedList';
 import { getBreeds } from '../../redux/Actions/dogs';
 import LoadingHOC from '../HOC/loadingHOC';
 

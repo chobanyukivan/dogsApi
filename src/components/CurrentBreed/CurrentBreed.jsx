@@ -2,9 +2,9 @@ import React, { Component, Fragment } from 'react';
 import PropTypes from 'prop-types';
 import Button from '@material-ui/core/Button';
 import CurrentContent from './CurrentContent';
-import './Current.css';
+import './CurrentBreed.css';
 
-class Current extends Component {
+class CurrentBreed extends Component {
     onButtonClick = () => {
       const { getCurrentBreed, breed } = this.props;
       getCurrentBreed(breed);
@@ -15,7 +15,7 @@ class Current extends Component {
       return (
         <Fragment>
           <div className="current-title-wrap">
-            <h2 className="title__h2-current">Порода: {breed}</h2>
+            <h2 className="current-title">Порода: {breed}</h2>
             <Button variant="contained" color="primary" onClick={this.onButtonClick}>Еще</Button>
           </div>
           <div className="current-content-wrap">
@@ -26,7 +26,7 @@ class Current extends Component {
     }
 }
 
-Current.propTypes = {
+CurrentBreed.propTypes = {
   getCurrentBreed: PropTypes.func.isRequired,
   breed: PropTypes.string.isRequired,
   match: PropTypes.shape({
@@ -39,4 +39,4 @@ Current.propTypes = {
   }).isRequired,
 };
 
-export default Current;
+export default CurrentBreed;

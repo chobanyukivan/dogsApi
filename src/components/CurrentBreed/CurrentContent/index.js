@@ -1,11 +1,11 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
-import CurrentContent from './CurrentContent.jsx';
+import CurrentBreedContent from './CurrentBreedContent';
 import LoadingHOC from '../../HOC/loadingHOC';
 import { getCurrentBreed } from '../../../redux/Actions/dogs';
 
-const AppComponent = LoadingHOC('isFetchingPhotos')(CurrentContent);
+const AppComponent = LoadingHOC('isFetchingPhotos')(CurrentBreedContent);
 
 class ContainerCurrentContent extends Component {
     state = {

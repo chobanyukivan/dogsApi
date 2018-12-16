@@ -10,13 +10,21 @@ const LoadingHOC = loadingProp => WrappedComponent =>
   class LoadingHOC extends Component {
     render() {
       const { error } = this.props;
-      return (isTrue(this.props[loadingProp]))
-        ? <div className="loader" />
-        : (error)
-          ? <p> Чтото пошло не так. Ошибка: {error.message}</p>
-          : <WrappedComponent {...this.props} />;
+      if (isTrue(this.props[loadingProp])) {
+        return (
+          <div className="loader" />
+        );
+      }
+      if (error) {
+        return (
+          <p> Чтото пошло не так. Ошибка: {error.message}</p>
+        );
+      }
+      return (
+        <WrappedComponent {...this.props} />
+      );
     }
-  };
+};
 
 LoadingHOC.propTypes = {
   loadingProp: PropTypes.bool.isRequired,

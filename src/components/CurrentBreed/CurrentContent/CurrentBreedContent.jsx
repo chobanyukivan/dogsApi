@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const CurrentContent = ({ breedPhotos }) => {
+const CurrentBreedContent = ({ breedPhotos }) => {
   if (breedPhotos) {
     return (
       breedPhotos.map((item) => {
@@ -21,10 +21,10 @@ const CurrentContent = ({ breedPhotos }) => {
   return false;
 };
 
-CurrentContent.propTypes = {
+CurrentBreedContent.propTypes = {
   breedPhotos: PropTypes.oneOfType([
     PropTypes.string,
     PropTypes.array,
   ]).isRequired,
 };
-export default CurrentContent;
+export default CurrentBreedContent;

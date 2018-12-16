@@ -1,14 +1,14 @@
 import React from 'react';
 import { Link, Route } from 'react-router-dom';
 import PropTypes from 'prop-types';
-import ContainerCurrent from '../Current';
+import ContainerCurrentBreed from '../CurrentBreed';
 import './BreedList.css';
 
 const BreedList = ({ match, breedList }) => (
   <div>
     <div className="breeds-wrap">
-      <div className="breeds-wrap-l">
-        <h2 className="title__h2">Породы</h2>
+      <div className="breeds-wrap-left">
+        <h2 className="breeds-title">Породы</h2>
         <div className="breeds__links">
           {Object.keys(breedList).map(item => (
             <div key={item}>
@@ -17,8 +17,8 @@ const BreedList = ({ match, breedList }) => (
           ))}
         </div>
       </div>
-      <div className="breeds-wrap-r">
-        <Route path={`${match.path}/:topicId`} component={ContainerCurrent} />
+      <div className="breeds-wrap-right">
+        <Route path={`${match.path}/:topicId`} component={ContainerCurrentBreed} />
       </div>
     </div>
   </div>
