@@ -1,0 +1,19 @@
+.title__h2 {
+    text-align: center;
+}
+.breeds-wrap {
+    display: flex;
+}
+.breeds-wrap-l, .breeds-wrap-r {
+    padding: 0 30px;
+    width: 20%;
+    min-width: 135px;
+}
+.breeds-wrap-r {
+    width: 70%;
+    position: relative;
+}
+.breeds__links {
+    height: 500px;
+    overflow: hidden scroll;
+}

@@ -1,0 +1,21 @@
+.title__h2-current {
+    display: inline-block;
+    margin-right: 15px;
+}
+.current-title-wrap {
+    display: flex;
+    align-items: center;
+}
+.current-content-wrap {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    height: 500px;
+}
+.current-content__item {
+    width: 100%;
+}
+.current-content-item-wrap {
+    width: 50%;
+    overflow: hidden;
+}

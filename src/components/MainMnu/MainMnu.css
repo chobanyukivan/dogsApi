@@ -1,0 +1,9 @@
+.navigation {
+    padding: 0 30px;
+}
+
+.navigation a {
+    color: #ffffff;
+    text-decoration: none;
+    padding: 8px 13px;
+}
